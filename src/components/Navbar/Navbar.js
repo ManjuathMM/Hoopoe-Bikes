@@ -1,13 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import hoopoeLogo from '../../assets/images/logos/Hoopoe.jpg';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToProducts = () => {
-    const productsSection = document.querySelector('.products-section');
-    if (productsSection) {
-      productsSection.scrollIntoView({ behavior: 'smooth' });
+    // Check if we're on the home page
+    if (location.pathname === '/') {
+      // If on home page, just scroll to products section
+      const productsSection = document.querySelector('.products-section');
+      if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, navigate to home page first, then scroll
+      navigate('/');
+      // Use setTimeout to ensure the page has loaded before scrolling
+      setTimeout(() => {
+        const productsSection = document.querySelector('.products-section');
+        if (productsSection) {
+          productsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 

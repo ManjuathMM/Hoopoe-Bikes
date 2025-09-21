@@ -1,7 +1,7 @@
-/* Override Ant Design Carousel styles for full screen */
+/* Override Ant Design Carousel styles */
 .ant-carousel {
   height: 80vh !important;
-  width: 100vw !important;
+  width: 100% !important;
 }
 
 .ant-carousel .slick-slide {
@@ -53,13 +53,17 @@
 .carousel-slide {
   height: 80vh;
   outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slide-content {
   position: relative;
   height: 100%;
+  width: 100%;
   overflow: hidden;
   margin: 0;
+  padding: 0;
 }
 
 .carousel-image {
@@ -67,6 +71,9 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .slide-overlay {
@@ -137,9 +144,24 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .product-carousel-section {
-    height: 70vh;
-    padding: 20px 0;
+  .ant-carousel {
+    height: 70vh !important;
+  }
+
+  .ant-carousel .slick-slide {
+    height: 70vh !important;
+  }
+
+  .ant-carousel .slick-slide > div {
+    height: 70vh !important;
+  }
+
+  .ant-carousel .slick-list {
+    height: 70vh !important;
+  }
+
+  .ant-carousel .slick-track {
+    height: 70vh !important;
   }
 
   .carousel-slide {
@@ -187,9 +209,24 @@
 }
 
 @media (max-width: 480px) {
-  .product-carousel-section {
-    height: 60vh;
-    padding: 15px 0;
+  .ant-carousel {
+    height: 60vh !important;
+  }
+
+  .ant-carousel .slick-slide {
+    height: 60vh !important;
+  }
+
+  .ant-carousel .slick-slide > div {
+    height: 60vh !important;
+  }
+
+  .ant-carousel .slick-list {
+    height: 60vh !important;
+  }
+
+  .ant-carousel .slick-track {
+    height: 60vh !important;
   }
 
   .carousel-slide {
