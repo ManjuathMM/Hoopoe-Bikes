@@ -78,8 +78,8 @@ export const productsData = {
   base: {
     id: 'base',
     name: 'XO-RIDE BEETLE',
-    price: '$2,295',
-    originalPrice: '$3,345',
+    price: '₹34,999',
+    originalPrice: '₹39,999',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'WHERE STYLE MEETS MOTION',
@@ -122,13 +122,13 @@ export const productsData = {
         'Battery Warranty': '2 Years Battery Warranty*',
       },
     },
-    images: productImages.orange,
+    images: productImages.silver,
   },
   mid: {
     id: 'mid',
     name: 'XO-RIDE STORM',
-    price: '$2,645',
-    originalPrice: '$2,995',
+    price: '₹36,999',
+    originalPrice: '₹41,999',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'DARE TO MOVE DIFFERENT',
@@ -171,13 +171,13 @@ export const productsData = {
         'Battery Warranty': '2 Years Battery Warranty*',
       },
     },
-    images: productImages.green,
+    images: productImages.orange,
   },
   pro: {
     id: 'pro',
     name: 'PRO',
-    price: '$3,995',
-    originalPrice: '$4,995',
+    price: '₹39,999',
+    originalPrice: '₹44,999',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'EXPLORE. DREAM. DISCOVER.',
@@ -220,6 +220,6 @@ export const productsData = {
         'Battery Warranty': '5 Years Battery Warranty*',
       },
     },
-    images: productImages.silver,
+    images: productImages.green,
   },
 };

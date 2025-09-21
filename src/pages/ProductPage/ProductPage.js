@@ -4,6 +4,9 @@ import { productsData } from '../../data/productsData';
 import Topbar from '../../components/Topbar';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import DetailedBase from '../../assets/images/products/Silver/DetailedBase.png';
+import DetailedMid from '../../assets/images/products/Orange/DetailedMid.png';
+import DetailedPro from '../../assets/images/products/SeaGreen/DetailedPro.png';
 import './ProductPage.css';
 
 const ProductPage = () => {
@@ -28,6 +31,19 @@ const ProductPage = () => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
+  const getDetailedImage = (productId) => {
+    switch (productId) {
+      case 'base':
+        return DetailedBase;
+      case 'mid':
+        return DetailedMid;
+      case 'pro':
+        return DetailedPro;
+      default:
+        return DetailedBase;
+    }
+  };
+
   return (
     <div className="product-page">
       <Topbar />
@@ -36,6 +52,22 @@ const ProductPage = () => {
       <div className="product-container">
         {/* Left Side - Images */}
         <div className="product-images-section">
+          {/* Product Name Header - Above Images */}
+          <div className="product-name-header-left">
+            <div className="product-name-section">
+              <h1 className="product-title">{product.name}</h1>
+              <p className="product-subtitle">{product.subtitle}</p>
+            </div>
+            <div className="product-price-section">
+              <div className="price-container">
+                <span className="current-price">{product.price}</span>
+                {product.originalPrice && (
+                  <span className="original-price">{product.originalPrice}</span>
+                )}
+              </div>
+            </div>
+          </div>
+          
           <div className="main-image-container">
             <img
               src={product.images[selectedImage]}
@@ -64,11 +96,6 @@ const ProductPage = () => {
 
         {/* Right Side - Product Details */}
         <div className="product-details-section">
-          <div className="product-name-header">
-            <h1 className="product-title">{product.name}</h1>
-            <p className="product-subtitle">{product.subtitle}</p>
-          </div>
-
           <div className="shipping-info">
             <div className="shipping-icon">🚚</div>
             <span>{product.shippingInfo}</span>
@@ -125,6 +152,17 @@ const ProductPage = () => {
           <div className="contact-section">
             <button className="contact-btn">CONTACT US!</button>
           </div>
+        </div>
+      </div>
+
+      {/* Detailed Product Image Section */}
+      <div className="detailed-image-section">
+        <div className="detailed-image-container">
+          <img 
+            src={getDetailedImage(productId)} 
+            alt={`${product.name} Detailed View`}
+            className="detailed-product-image"
+          />
         </div>
       </div>
 
