@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData } from '../../data/productsData';
 import Topbar from '../../components/Topbar';
@@ -11,17 +11,20 @@ import './ProductPage.css';
 
 const ProductPage = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [expandedSection, setExpandedSection] = useState(null);
 
-  useEffect(() => {
-    const productData = productsData[productId];
-    if (productData) {
-      setProduct(productData);
-      setSelectedImage(0);
-    }
-  }, [productId]);
+  const product = productsData[productId];
+
+  // WhatsApp contact function
+  const openWhatsApp = () => {
+    const phoneNumber = '918861334320'; // change to your WhatsApp number
+    const message = `Hello, I want to know more about the ${product.name}`; // optional
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message,
+    )}`;
+    window.open(url, '_blank'); // opens in new tab
+  };
 
   if (!product) {
     return <div>Product not found</div>;
@@ -46,7 +49,7 @@ const ProductPage = () => {
 
   return (
     <div className="product-page">
-      <Topbar />
+      {/* <Topbar /> */}
       <Navbar />
 
       <div className="product-container">
@@ -62,12 +65,14 @@ const ProductPage = () => {
               <div className="price-container">
                 <span className="current-price">{product.price}</span>
                 {product.originalPrice && (
-                  <span className="original-price">{product.originalPrice}</span>
+                  <span className="original-price">
+                    {product.originalPrice}
+                  </span>
                 )}
               </div>
             </div>
           </div>
-          
+
           <div className="main-image-container">
             <img
               src={product.images[selectedImage]}
@@ -150,7 +155,9 @@ const ProductPage = () => {
           </div>
 
           <div className="contact-section">
-            <button className="contact-btn">CONTACT US!</button>
+            <button className="contact-btn" onClick={openWhatsApp}>
+              CONTACT US!
+            </button>
           </div>
         </div>
       </div>
@@ -158,8 +165,8 @@ const ProductPage = () => {
       {/* Detailed Product Image Section */}
       <div className="detailed-image-section">
         <div className="detailed-image-container">
-          <img 
-            src={getDetailedImage(productId)} 
+          <img
+            src={getDetailedImage(productId)}
             alt={`${product.name} Detailed View`}
             className="detailed-product-image"
           />

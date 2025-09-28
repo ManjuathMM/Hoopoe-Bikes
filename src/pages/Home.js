@@ -16,46 +16,43 @@ const Home = () => {
       id: 1,
       name: 'BASE',
       title: 'XO-RIDE BEETLE',
-      series: 'BASE SERIES',
       price: '₹34,999',
       image: silverBike,
       alt: 'Silver Electric Bike',
-      mileRange: '25-45*',
-      class: '20 MPH',
+      range: '60km',
+      speed: '25 Km/h',
       freeShipping: true,
-      shopLink: 'SHOP BASE SERIES',
+      shopLink: 'BUY NOW',
     },
     {
       id: 2,
       name: 'MID',
       title: 'XO-RIDE STORM',
-      series: 'MID SERIES',
       price: '₹36,999',
       image: orangeBike,
       alt: 'Orange Electric Bike',
-      mileRange: '25-45*',
-      class: '20 MPH',
+      range: '65km',
+      speed: '25km/h',
       freeShipping: true,
-      shopLink: 'SHOP MID SERIES',
+      shopLink: 'BUY NOW',
     },
     {
       id: 3,
       name: 'PRO',
       title: 'XO-RIDE FIREFLY',
-      series: 'PRO SERIES',
       price: '₹39,999',
       image: greenBike,
       alt: 'Green Electric Bike',
-      mileRange: '40-55*',
-      class: '28 MPH',
+      range: '75km',
+      speed: '25 km/h',
       freeShipping: true,
-      shopLink: 'SHOP PRO SERIES',
+      shopLink: 'BUY NOW',
     },
   ];
 
   return (
     <div className="home">
-      <Topbar />
+      {/* <Topbar /> */}
       <Navbar />
 
       {/* Full Screen Banner Section */}
@@ -73,16 +70,18 @@ const Home = () => {
       {/* Legacy Series Section */}
       <div className="legacy-section">
         <div className="legacy-content">
-          <p className="legacy-subtitle">
-            WE'RE NOT REINVENTING THE WHEEL; WE'RE PERFECTING IT.
-          </p>
-          <h2 className="legacy-title">INTRODUCING THE XO - RIDE SERIES</h2>
+          <p className="legacy-subtitle">Redefining Everyday Mobility</p>
+          <h2 className="legacy-title">
+            Introducing the Next Chapter of Hoopoe E-Bikes
+          </h2>
           <p className="legacy-description">
-            You asked, and we listened. Our team spent the last few years
-            crafting a lineup that meets all of your needs. Enter... the Legacy
-            Series. The form factor you know and love, paired with an evolved
-            powertrain. Feel the difference with up to 30% more acceleration and
-            other key performance upgrades.
+            At Hoopoe, innovation doesn’t stop - it evolves. Over the past
+            years, we’ve been listening, learning, and designing a ride that
+            truly matches the needs of today’s riders. The result? Our latest
+            Hoopoe lineup. It’s the same sleek and accessible design you love,
+            now powered by smarter engineering, advanced safety, and refined
+            performance. With quicker pick-up, improved range, and next-level
+            comfort, every ride feels effortless.
           </p>
         </div>
       </div>
@@ -113,12 +112,12 @@ const Home = () => {
 
               <div className="product-specs">
                 <div className="spec-item">
-                  <span className="spec-label">MILE RANGE</span>
-                  <span className="spec-value">{product.mileRange}</span>
+                  <span className="spec-label">RANGE</span>
+                  <span className="spec-value">{product.range}</span>
                 </div>
                 <div className="spec-item">
-                  <span className="spec-label">CLASS 2</span>
-                  <span className="spec-value">{product.class}</span>
+                  <span className="spec-label">SPEED</span>
+                  <span className="spec-value">{product.speed}</span>
                 </div>
                 <div className="spec-item">
                   <span className="spec-label">PRICE</span>

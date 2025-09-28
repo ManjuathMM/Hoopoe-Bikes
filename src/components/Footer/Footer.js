@@ -1,7 +1,18 @@
 import React from 'react';
+import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+  // WhatsApp contact function
+  const openWhatsApp = () => {
+    const phoneNumber = '918861334320'; // WhatsApp number
+    const message = 'Hello, I want to know more about Hoopoe Bikes';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message,
+    )}`;
+    window.open(url, '_blank'); // opens in new tab
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -39,7 +50,7 @@ const Footer = () => {
           <h3>LOCATIONS</h3>
           <ul>
             <li>
-              <a href="/showroom/irvine">Belgaum, Karnataka India</a>
+              <a href="/showroom/irvine">Belgaum, Karnataka, India</a>
             </li>
           </ul>
         </div>
@@ -87,26 +98,34 @@ const Footer = () => {
               <a
                 href="https://x.com/HoopoeBikes"
                 className="social-icon twitter"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                t
+                <FaTwitter />
               </a>
               <a
                 href="https://www.instagram.com/hoopoe_e_bikes?igsh=MTEwOWFja2ZjZnB2ag=="
-                className="social-icon camera"
+                className="social-icon instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                IG
+                <FaInstagram />
               </a>
               <a
                 href="https://youtube.com/@hoopoebikes?si=X9RlzmFg4GZWA-sm"
                 className="social-icon youtube"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                ▶
+                <FaYoutube />
               </a>
               <a
                 href="https://www.linkedin.com/company/hoopoe-bikes/"
                 className="social-icon linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                in
+                <FaLinkedin />
               </a>
             </div>
           </div>
@@ -116,7 +135,9 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© HoopoeBikes, Inc. All Rights Reserved.</p>
-          <button className="contact-us-btn">CONTACT US!</button>
+          <button className="contact-us-btn" onClick={openWhatsApp}>
+            CONTACT US!
+          </button>
         </div>
       </div>
     </footer>
