@@ -44,25 +44,25 @@
 
 /* Override Ant Design Carousel styles */
 .ant-carousel {
-  height: 70vh !important;
+  height: 50vh !important;
   width: 100% !important;
   background-color: #000;
 }
 
 .ant-carousel .slick-slide {
-  height: 70vh !important;
+  height: 50vh !important;
 }
 
 .ant-carousel .slick-slide > div {
-  height: 70vh !important;
+  height: 50vh !important;
 }
 
 .ant-carousel .slick-list {
-  height: 70vh !important;
+  height: 50vh !important;
 }
 
 .ant-carousel .slick-track {
-  height: 70vh !important;
+  height: 50vh !important;
 }
 
 .carousel-container {
@@ -72,10 +72,10 @@
 }
 
 .carousel-slide {
-  height: 70vh;
+  height: 50vh;
   outline: none;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   background-color: #000;
   overflow: hidden;
 }
@@ -190,28 +190,28 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .ant-carousel {
-    height: 60vh !important;
+    height: 40vh !important;
   }
 
   .ant-carousel .slick-slide {
-    height: 60vh !important;
+    height: 40vh !important;
   }
 
   .ant-carousel .slick-slide > div {
-    height: 60vh !important;
+    height: 40vh !important;
   }
 
   .ant-carousel .slick-list {
-    height: 60vh !important;
+    height: 40vh !important;
   }
 
   .ant-carousel .slick-track {
-    height: 60vh !important;
+    height: 40vh !important;
   }
 
   .carousel-slide {
-    height: 60vh;
-    padding: 15px;
+    height: 40vh;
+    padding: 12px;
   }
 
   .image-item-continuous {
@@ -235,28 +235,28 @@
 
 @media (max-width: 480px) {
   .ant-carousel {
-    height: 50vh !important;
+    height: 35vh !important;
   }
 
   .ant-carousel .slick-slide {
-    height: 50vh !important;
+    height: 35vh !important;
   }
 
   .ant-carousel .slick-slide > div {
-    height: 50vh !important;
+    height: 35vh !important;
   }
 
   .ant-carousel .slick-list {
-    height: 50vh !important;
+    height: 35vh !important;
   }
 
   .ant-carousel .slick-track {
-    height: 50vh !important;
+    height: 35vh !important;
   }
 
   .carousel-slide {
-    height: 50vh;
-    padding: 10px;
+    height: 35vh;
+    padding: 8px;
   }
 
   .image-item-continuous {
