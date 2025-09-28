@@ -90,16 +90,14 @@ const Home = () => {
       <section className="products-section">
         <div className="products-container">
           {bikeProducts.map((product) => (
-            <div key={product.id} className="product-card-home">
+            <Link
+              key={product.id}
+              to={`/product/${product.name.toLowerCase()}`}
+              className="product-card-home"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <div className="product-header">
                 <h3 className="product-title">{product.title}</h3>
-                <h2 className="product-series">{product.series}</h2>
-                {product.freeShipping && (
-                  <div className="free-shipping-badge">
-                    <span>FREE</span>
-                    <span>SHIPPING</span>
-                  </div>
-                )}
               </div>
 
               <div className="product-image-container">
@@ -125,13 +123,10 @@ const Home = () => {
                 </div>
               </div>
 
-              <Link
-                to={`/product/${product.name.toLowerCase()}`}
-                className="shop-button"
-              >
-                {product.shopLink}
-              </Link>
-            </div>
+              <div className="button-container">
+                <span className="shop-button">{product.shopLink}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </section>

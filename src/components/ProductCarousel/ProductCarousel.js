@@ -1,5 +1,5 @@
+import React from 'react';
 import './ProductCarousel.css';
-import { Carousel } from 'antd';
 import image1 from '../../assets/images/products/Moving_Section/1.jpg';
 import image2 from '../../assets/images/products/Moving_Section/2.png';
 import image3 from '../../assets/images/products/Moving_Section/3.png';
@@ -11,22 +11,37 @@ const ProductCarousel = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
-    <div className="carousel-container">
-      <Carousel autoplay autoplaySpeed={2000}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <div className="carousel-slide">
-              <div className="slide-content">
+    <div className="carousel-wrapper">
+      {/* Top Brand Bar */}
+      <div className="brand-bar brand-bar-top">
+        {Array(8).fill().map((_, index) => (
+          <span key={index} className="brand-text">@ HOOPOE BIKES</span>
+        ))}
+      </div>
+
+      <div className="carousel-container">
+        <div className="carousel-slide">
+          <div className="images-track">
+            {/* Create continuous loop by duplicating images */}
+            {[...images, ...images, ...images].map((image, index) => (
+              <div key={index} className="image-item-continuous">
                 <img 
                   src={image} 
-                  alt={`Moving carousel ${index + 1}`}
-                  className="carousel-image"
+                  alt={`Hoopoe Bike ${(index % images.length) + 1}`}
+                  className="carousel-image-continuous"
                 />
               </div>
-            </div>
+            ))}
           </div>
+        </div>
+      </div>
+
+      {/* Bottom Brand Bar */}
+      <div className="brand-bar brand-bar-bottom">
+        {Array(8).fill().map((_, index) => (
+          <span key={index} className="brand-text">@ HOOPOE BIKES</span>
         ))}
-      </Carousel>
+      </div>
     </div>
   );
 };
