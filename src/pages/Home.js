@@ -110,15 +110,15 @@ const Home = () => {
 
               <div className="product-specs">
                 <div className="spec-item">
-                  <span className="spec-label">RANGE</span>
+                  <span className="spec-label">RANGE:</span>
                   <span className="spec-value">{product.range}</span>
                 </div>
                 <div className="spec-item">
-                  <span className="spec-label">SPEED</span>
+                  <span className="spec-label">SPEED:</span>
                   <span className="spec-value">{product.speed}</span>
                 </div>
                 <div className="spec-item">
-                  <span className="spec-label">PRICE</span>
+                  <span className="spec-label">PRICE:</span>
                   <span className="spec-value">{product.price}</span>
                 </div>
               </div>

@@ -351,34 +351,33 @@
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .spec-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex: 1;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 6px;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  padding: 8px 0;
+  gap: 8px;
 }
 
 .spec-label {
-  font-size: 20px;
-  font-weight: 600;
-  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .spec-value {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
 }
 
 .button-container {
@@ -476,11 +475,15 @@
   }
 
   .spec-label {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
   }
 
   .spec-value {
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: normal;
+    color: #666;
   }
 
   .shop-button {
