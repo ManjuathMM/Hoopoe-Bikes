@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProductCarousel.css';
-import image1 from '../../assets/images/products/Moving_Section/1.jpg';
+import image1 from '../../assets/images/products/Moving_Section/1.png';
 import image2 from '../../assets/images/products/Moving_Section/2.png';
-import image3 from '../../assets/images/products/Moving_Section/3.png';
+import image3 from '../../assets/images/products/Moving_Section/3.jpg';
 import image4 from '../../assets/images/products/Moving_Section/4.png';
 import image5 from '../../assets/images/products/Moving_Section/5.png';
 import image6 from '../../assets/images/products/Moving_Section/6.png';
@@ -15,9 +15,13 @@ const ProductCarousel = () => {
       {/* Top Brand Bar */}
       <div className="brand-bar brand-bar-top">
         <div className="brand-track">
-          {Array(20).fill().map((_, index) => (
-            <span key={index} className="brand-text">@ HOOPOE BIKES</span>
-          ))}
+          {Array(20)
+            .fill()
+            .map((_, index) => (
+              <span key={index} className="brand-text">
+                @ HOOPOE BIKES
+              </span>
+            ))}
         </div>
       </div>
 
@@ -27,8 +31,8 @@ const ProductCarousel = () => {
             {/* Create continuous loop by duplicating images */}
             {[...images, ...images, ...images].map((image, index) => (
               <div key={index} className="image-item-continuous">
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={`Hoopoe Bike ${(index % images.length) + 1}`}
                   className="carousel-image-continuous"
                 />
@@ -41,9 +45,13 @@ const ProductCarousel = () => {
       {/* Bottom Brand Bar */}
       <div className="brand-bar brand-bar-bottom">
         <div className="brand-track">
-          {Array(20).fill().map((_, index) => (
-            <span key={index} className="brand-text">@ HOOPOE BIKES</span>
-          ))}
+          {Array(20)
+            .fill()
+            .map((_, index) => (
+              <span key={index} className="brand-text">
+                @ HOOPOE BIKES
+              </span>
+            ))}
         </div>
       </div>
     </div>

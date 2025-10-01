@@ -88,43 +88,51 @@ const Home = () => {
 
       {/* Products Section */}
       <section className="products-section">
+        <div className="products-header">
+          <h1 className="main-heading">Experience the future of E-Bikes</h1>
+        </div>
+
         <div className="products-container">
           {bikeProducts.map((product) => (
             <Link
               key={product.id}
               to={`/product/${product.name.toLowerCase()}`}
-              className="product-card-home"
+              className="bike-card-link"
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              <div className="product-header">
-                <h3 className="product-title">{product.title}</h3>
-              </div>
+              <div className="bike-card">
+                <div className="bike-card-content">
+                  <h2 className="bike-name">{product.title}</h2>
 
-              <div className="product-image-container">
-                <img
-                  src={product.image}
-                  alt={product.alt}
-                  className="product-image-home"
-                />
-              </div>
+                  <div className="bike-image-wrapper">
+                    <img
+                      src={product.image}
+                      alt={product.alt}
+                      className="bike-image"
+                    />
+                  </div>
 
-              <div className="product-specs">
-                <div className="spec-item">
-                  <span className="spec-label">RANGE:</span>
-                  <span className="spec-value">{product.range}</span>
-                </div>
-                <div className="spec-item">
-                  <span className="spec-label">SPEED:</span>
-                  <span className="spec-value">{product.speed}</span>
-                </div>
-                <div className="spec-item">
-                  <span className="spec-label">PRICE:</span>
-                  <span className="spec-value">{product.price}</span>
-                </div>
-              </div>
+                  <div className="param-container">
+                    <div className="param-item">
+                      <div className="param-label">RANGE</div>
+                      <div className="param-value">{product.range}</div>
+                    </div>
 
-              <div className="button-container">
-                <span className="shop-button">{product.shopLink}</span>
+                    <div className="param-item">
+                      <div className="param-label">SPEED</div>
+                      <div className="param-value">{product.speed}</div>
+                    </div>
+
+                    <div className="param-item">
+                      <div className="param-label">PRICE</div>
+                      <div className="param-value">{product.price}</div>
+                    </div>
+                  </div>
+
+                  <div className="buy-button">
+                    BUY NOW
+                  </div>
+                </div>
               </div>
             </Link>
           ))}
