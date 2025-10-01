@@ -175,7 +175,7 @@ export const productsData = {
   },
   pro: {
     id: 'pro',
-    name: 'PRO',
+    name: 'XO-RIDE FIREFLY',
     price: '₹39,999',
     originalPrice: '₹44,999',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',

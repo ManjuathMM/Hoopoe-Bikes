@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData } from '../../data/productsData';
 import Topbar from '../../components/Topbar';
@@ -15,6 +15,11 @@ const ProductPage = () => {
   const [expandedSection, setExpandedSection] = useState(null);
 
   const product = productsData[productId];
+
+  // Scroll to top when component mounts or productId changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [productId]);
 
   // WhatsApp contact function
   const openWhatsApp = () => {

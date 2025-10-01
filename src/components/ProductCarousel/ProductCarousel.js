@@ -14,9 +14,11 @@ const ProductCarousel = () => {
     <div className="carousel-wrapper">
       {/* Top Brand Bar */}
       <div className="brand-bar brand-bar-top">
-        {Array(8).fill().map((_, index) => (
-          <span key={index} className="brand-text">@ HOOPOE BIKES</span>
-        ))}
+        <div className="brand-track">
+          {Array(20).fill().map((_, index) => (
+            <span key={index} className="brand-text">@ HOOPOE BIKES</span>
+          ))}
+        </div>
       </div>
 
       <div className="carousel-container">
@@ -38,9 +40,11 @@ const ProductCarousel = () => {
 
       {/* Bottom Brand Bar */}
       <div className="brand-bar brand-bar-bottom">
-        {Array(8).fill().map((_, index) => (
-          <span key={index} className="brand-text">@ HOOPOE BIKES</span>
-        ))}
+        <div className="brand-track">
+          {Array(20).fill().map((_, index) => (
+            <span key={index} className="brand-text">@ HOOPOE BIKES</span>
+          ))}
+        </div>
       </div>
     </div>
   );

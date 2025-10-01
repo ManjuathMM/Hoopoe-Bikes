@@ -24,21 +24,28 @@
   border-top: 1px solid #333;
 }
 
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: scrollBrandText 25s linear infinite;
+  gap: 80px;
+  align-items: center;
+}
+
 .brand-text {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-right: 80px;
   display: inline-block;
-  animation: scrollText 20s linear infinite;
+  flex-shrink: 0;
 }
 
-@keyframes scrollText {
+@keyframes scrollBrandText {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -225,7 +232,10 @@
 
   .brand-text {
     font-size: 12px;
-    margin-right: 60px;
+  }
+
+  .brand-track {
+    gap: 60px;
   }
 
   .brand-bar {
@@ -270,7 +280,10 @@
 
   .brand-text {
     font-size: 10px;
-    margin-right: 40px;
+  }
+
+  .brand-track {
+    gap: 40px;
   }
 
   .brand-bar {
