@@ -6,9 +6,10 @@ import image3 from '../../assets/images/products/Moving_Section/3.jpg';
 import image4 from '../../assets/images/products/Moving_Section/4.png';
 import image5 from '../../assets/images/products/Moving_Section/5.png';
 import image6 from '../../assets/images/products/Moving_Section/6.png';
+import image7 from '../../assets/images/products/Moving_Section/7.jpg';
 
 const ProductCarousel = () => {
-  const images = [image1, image2, image3, image4, image5, image6];
+  const images = [image1, image2, image3, image4, image5, image6, image7];
 
   return (
     <div className="carousel-wrapper">

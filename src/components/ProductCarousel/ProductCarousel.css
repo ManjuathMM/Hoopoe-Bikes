@@ -99,10 +99,11 @@
 .image-item-continuous {
   flex-shrink: 0;
   width: 300px;
-  height: 80%;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 .carousel-image-continuous {
@@ -223,7 +224,7 @@
 
   .image-item-continuous {
     width: 250px;
-    height: 75%;
+    height: 280px;
   }
 
   .images-track {
@@ -271,7 +272,7 @@
 
   .image-item-continuous {
     width: 200px;
-    height: 70%;
+    height: 220px;
   }
 
   .images-track {
