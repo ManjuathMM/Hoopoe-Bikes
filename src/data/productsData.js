@@ -78,8 +78,9 @@ export const productsData = {
   base: {
     id: 'base',
     name: 'XO-RIDE BEETLE',
-    price: '₹34,999',
-    originalPrice: '₹39,999',
+    // price: '₹34,999',
+    price: '₹ COMING SOON',
+    originalPrice: '₹49,000',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'WHERE STYLE MEETS MOTION',
@@ -127,8 +128,9 @@ export const productsData = {
   mid: {
     id: 'mid',
     name: 'XO-RIDE STORM',
-    price: '₹36,999',
-    originalPrice: '₹41,999',
+    // price: '₹59000',
+    price: '₹ COMING SOON',
+    originalPrice: '₹59000',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'DARE TO MOVE DIFFERENT',
@@ -176,8 +178,9 @@ export const productsData = {
   pro: {
     id: 'pro',
     name: 'XO-RIDE FIREFLY',
-    price: '₹39,999',
-    originalPrice: '₹44,999',
+    // price: '₹69000',
+    price: '₹ COMING SOON',
+    originalPrice: '₹69,000',
     shippingInfo: 'Exclusive Pre-Launch Pre-Booking Offer.',
     description: {
       title: 'EXPLORE. DREAM. DISCOVER.',

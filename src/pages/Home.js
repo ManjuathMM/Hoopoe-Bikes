@@ -16,7 +16,8 @@ const Home = () => {
       id: 1,
       name: 'BASE',
       title: 'XO-RIDE BEETLE',
-      price: '₹34,999',
+      // price: '₹34,999',
+      price: 'COMING SOON',
       image: silverBike,
       alt: 'Silver Electric Bike',
       range: '60km',
@@ -28,7 +29,8 @@ const Home = () => {
       id: 2,
       name: 'MID',
       title: 'XO-RIDE STORM',
-      price: '₹36,999',
+      // price: '₹36,999',
+      price: 'COMING SOON',
       image: orangeBike,
       alt: 'Orange Electric Bike',
       range: '65km',
@@ -40,7 +42,8 @@ const Home = () => {
       id: 3,
       name: 'PRO',
       title: 'XO-RIDE FIREFLY',
-      price: '₹39,999',
+      // price: '₹39,999',
+      price: 'COMING SOON',
       image: greenBike,
       alt: 'Green Electric Bike',
       range: '75km',
@@ -62,9 +65,7 @@ const Home = () => {
           alt="HoopoeBikes Banner"
           className="banner-image"
         />
-        <div className="banner-overlay">
-          <h1 className="banner-text">XO - RIDE</h1>
-        </div>
+        <div className="banner-overlay"></div>
       </div>
 
       {/* Legacy Series Section */}
@@ -129,9 +130,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="buy-button">
-                    BUY NOW
-                  </div>
+                  <div className="buy-button">BUY NOW</div>
                 </div>
               </div>
             </Link>
